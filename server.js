@@ -8,7 +8,7 @@ const models = require("./models");
 
 // Import routes and give the server access to them.
 const routes = require("./controllers/project-routes.js");
-app.use(routes);
+routes(app);
 
 models.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {

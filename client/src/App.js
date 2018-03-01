@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {FormExample} from './form.js';
+import { UserForm } from './form.js';
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <p className="App-intro">
           some text here about projection submission requirements
         </p>
-        <FormExample />
+        <UserForm />
       </div>
     );
   }

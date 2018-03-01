@@ -1,54 +1,51 @@
-import React from 'react';
-import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
+import React, { Component } from 'react';
+import $ from 'jquery';
 
-export class FormExample extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+export class UserForm extends Component {
+    constructor() {
+      super();
+      this.state = {
+        name: '',
+        about: '',
+        city: '',
+      };
+    }
 
-    this.state = {
-      name: '',
-      about: '',
-    };
+    onChange = (e) => {
+      // Because we named the inputs to match their corresponding values in state, it's
+      // super easy to update the state
+      const state = this.state
+      state[e.target.name] = e.target.value;
+      this.setState(state);
+    }
 
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleAboutChange = this.handleAboutChange.bind(this);
+    onSubmit = (e) => {
+      e.preventDefault();
+      // get our form data out of state
+      const data = JSON.stringify({ 
+        name: this.state.name, 
+        about: this.state.about, 
+        city: this.state.city 
+      });
+      console.log(data);
+      $.ajax({
+        url: "http://localhost:3030/api/projects",
+        type: "POST",
+        data: data
+      }).then((result) => {
+        console.log(result);
+      });
+    }
+
+    render() {
+      const { name, about, city } = this.state;
+      return (
+        <form>
+          <input type="text" name="name" value={name} onChange={this.onChange} />
+          <input type="text" name="about" value={about} onChange={this.onChange} />
+          <input type="text" name="city" value={city} onChange={this.onChange} />
+          <button type="submit" onClick={this.onSubmit}>Submit</button>
+        </form>
+      );
+    }
   }
-
-  handleNameChange(e) {
-    this.setState({ name: e.target.name });
-  }
-
-  handleAboutChange(e) {
-    this.setState({ about: e.target.about });
-  }
-
-  handleSubmit() {
-    console.log(this.state.name, this.state.about);
-  }
-
-  render() {
-    return (
-      <form>
-        <FormGroup controlId="formControlsText">
-          <ControlLabel>Textarea</ControlLabel>
-          <FormControl
-            componentClass="textarea"
-            placeholder="textarea"
-            value={this.state.name}
-            onChange={this.handleNameChange}
-          />
-        </FormGroup>
-        <FormGroup controlId="formControlsTextarea">
-          <ControlLabel>Textarea</ControlLabel>
-          <FormControl
-            componentClass="textarea"
-            placeholder="textarea"
-            value={this.state.about}
-            onChange={this.handleAboutChange}
-          />
-        </FormGroup>
-          <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
-      </form>
-    );
-  }
-};
