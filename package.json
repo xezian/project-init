@@ -7,9 +7,9 @@
     "start": "node server.js",
     "build": "cd client; npm run build",
     "test": "node_modules/.bin/tape test/*.js",
-    "dev": "concurrently 'cd client; npm start' 'nodemon server.js'",
+    "dev": "nodemon server.js & node dev.js",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "cd client; npm install"
+    "install": "node install.js"
   },
   "repository": {
     "type": "git",
