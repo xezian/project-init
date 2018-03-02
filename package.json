@@ -7,7 +7,7 @@
     "start": "node server.js",
     "build": "cd client; npm run build",
     "test": "node_modules/.bin/tape test/*.js",
-    "dev": "nodemon server.js & node dev.js",
+    "dev": "node dev.js",
     "prod": "NODE_ENV=production node server.js",
     "install": "node install.js"
   },
@@ -23,7 +23,6 @@
   "homepage": "https://github.com/xezian/project-init#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "mysql2": "^1.5.2",
     "sequelize": "^4.35.0"
