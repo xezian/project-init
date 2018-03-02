@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+const $ = require('jquery');
 
 export class UserForm extends Component {
     constructor() {
@@ -22,16 +22,16 @@ export class UserForm extends Component {
     onSubmit = (e) => {
       e.preventDefault();
       // get our form data out of state
-      const data = JSON.stringify({ 
+      const data = { 
         name: this.state.name, 
         about: this.state.about, 
         city: this.state.city 
-      });
+      };
       console.log(data);
-      $.ajax({
-        url: "http://localhost:3030/api/projects",
-        type: "POST",
-        data: data
+      $.post({
+        url: "/api/projects",
+        data: data,
+        dataType: 'json'
       }).then((result) => {
         console.log(result);
       });

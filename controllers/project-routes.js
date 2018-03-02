@@ -10,6 +10,7 @@ module.exports = function(app) {
 
     // Create a new project
     app.post("/api/projects", function(req, res) {
+    
         db.Project.create({
             name: req.body.name,
             about: req.body.about,
