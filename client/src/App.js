@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserForm } from './form.js';
+import { MapModal } from './mapmodal.js';
+
 
 class App extends Component {
   render() {
@@ -15,6 +17,8 @@ class App extends Component {
           some text here about projection submission requirements
         </p>
         <UserForm />
+        <hr />
+        <MapModal />
       </div>
     );
   }
