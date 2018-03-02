@@ -1,6 +1,6 @@
 var exec = require( "child_process" ).exec;
 
-var parent = exec( "node server.js ");
+var parent = exec( "nodemon server.js" );
 
 parent.stdout.pipe( process.stdout );
 parent.stderr.pipe( process.stderr );
