@@ -26,7 +26,6 @@
     "express": "^4.16.2",
     "google-map-react": "^0.32.0",
     "mysql2": "^1.5.2",
-    "react-google-maps": "^9.4.5",
     "sequelize": "^4.35.0"
   },
   "devDependencies": {

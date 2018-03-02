@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Popover, Tooltip, Modal, OverlayTrigger } from 'react-bootstrap';
 import { UserForm } from './form.js';
 
