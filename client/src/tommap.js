@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+const React = require('react');
 const fetch = require("isomorphic-fetch");
 const { compose, withProps, withHandlers } = require("recompose");
 const {
@@ -73,5 +73,3 @@ export default class DemoApp extends React.PureComponent {
 		)
 	}
 }
-
-	<DemoApp />

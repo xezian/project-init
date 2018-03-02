@@ -16,8 +16,9 @@ class App extends Component {
         <p className="App-intro">
           some text here about projection submission requirements
         </p>
-	<MapWithAMarkerClusterer />
-        <UserForm />
+      <MapWithAMarkerClusterer />
+      <br/>
+      <UserForm />
         <hr />
         <MapModal />
       </div>
