@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserForm } from './form.js';
+import { MapModal } from './mapmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 
 class App extends Component {
@@ -17,6 +18,8 @@ class App extends Component {
         </p>
 	<MapWithAMarkerClusterer />
         <UserForm />
+        <hr />
+        <MapModal />
       </div>
     );
   }
