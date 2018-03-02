@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { UserForm } from './form.js';
 import { MapModal } from './mapmodal.js';
-
+import MapWithAMarkerClusterer from './tommap.js';
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           some text here about projection submission requirements
         </p>
+	<MapWithAMarkerClusterer />
         <UserForm />
         <hr />
         <MapModal />
