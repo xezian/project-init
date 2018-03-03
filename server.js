@@ -15,9 +15,13 @@ if( process.env.NODE_ENV === 'production' ){
 };
 
 // Import routes and give the server access to them.
-const routes = require("./controllers/project-routes.js");
-routes(app);
+const projectRoutes = require("./controllers/project-routes.js");
+const userRoutes = require("./controllers/user-routes.js");
+const commentRoutes = require("./controllers/comment-routes.js");
 
+projectRoutes(app);
+userRoutes(app);
+commentRoutes(app);
 
 if( process.env.NODE_ENV === 'production' ){
   app.get('*', (req, res) => {
@@ -25,7 +29,7 @@ if( process.env.NODE_ENV === 'production' ){
   });
 }
 
-models.sequelize.sync({}).then(function() {
+models.sequelize.sync({ force:true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
