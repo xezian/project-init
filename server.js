@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-var http = require('http');
 
 const PORT = process.env.PORT || 3030;
 
@@ -13,7 +12,7 @@ app.use(bodyParser.json());
 
 if( process.env.NODE_ENV === 'production' ){
   app.use(express.static('client/build'));
-}
+};
 
 // Import routes and give the server access to them.
 const routes = require("./controllers/project-routes.js");
