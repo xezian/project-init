@@ -3,14 +3,18 @@ module.exports = (sequelize, DataTypes) => {
   var Project = sequelize.define('Project', {
     name: DataTypes.STRING,
     about: DataTypes.STRING,
+    category: DataTypes.STRING,
     latitude: DataTypes.FLOAT,
     longitude: DataTypes.FLOAT,
-    project_img: DataTypes.STRING,
-    creator_id: DataTypes.INTEGER,
-    votes: DataTypes.INTEGER
+    project_img: DataTypes.STRING
   }, {});
   Project.associate = function(models) {
-    // associations can be defined here
+    Project.belongsTo(models.User, {
+      as: "project_creator"
+    });
+    Project.hasMany(models.Comment, {
+      as: "project_comments"
+    });
   };
   return Project;
 };
