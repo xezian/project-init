@@ -70,4 +70,22 @@ module.exports = function(app) {
             console.warn(e);
         });
     });
+
+  // ============================================== //
+  // ================ UPDATE ROUTES =============== //
+  // ============================================== //
+
+    // Update a project
+  app.put("/api/projects", function(req, res) {
+    db.Project.update(
+        req.body,
+        {
+        where: {
+            project_id: req.body.project_id
+        }
+    })
+    .then(function(dbProject) {
+      res.json(dbProject);
+    });
+  });
 };
