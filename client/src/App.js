@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './bike-gear-icon.png';
 import './App.css';
 import { UserForm } from './form.js';
 import { MapModal } from './mapmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
+import { Grid, Col, Row } from 'react-bootstrap'
 
 class App extends Component {
   render() {
@@ -11,16 +12,22 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Project Initiative</h1>
         </header>
         <p className="App-intro">
-          some text here about projection submission requirements
         </p>
+        <Grid>
+        <Row className="show-grid">
+        <Col xs={12} md={8}>
         <MapWithAMarkerClusterer />
-        <br/>
+        </Col>
+        <Col xs={6} md={4}>
         <UserForm />
         <hr />
         <MapModal />
+        </Col>
+        </Row>
+        </Grid>
       </div>
     );
   }
