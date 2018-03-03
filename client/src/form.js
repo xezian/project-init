@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, FormGroup } from 'react-bootstrap';
-const $ = require('jquery');
+import $  from 'jquery';
 
 export class UserForm extends Component {
     constructor() {
