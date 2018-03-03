@@ -1,9 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background-image: url(./bikerack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
 }
-
 .modal-container {
   position: relative;
 }
