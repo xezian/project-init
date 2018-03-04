@@ -1,5 +1,5 @@
 body {
-  background-image: url(./bikerack.jpg);
+  background-image: linear-gradient(rgba(100, 50, 50, 1), rgba(100, 50, 50, 0.3)), url(./bikerack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,3 +13,4 @@ body {
 .modal-container .modal, .modal-container .modal-backdrop {
   position: absolute;
 }
+
