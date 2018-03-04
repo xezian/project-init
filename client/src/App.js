@@ -17,16 +17,19 @@ class App extends Component {
         <p className="App-intro">
         </p>
         <Grid>
-        <Row className="show-grid">
-        <Col xs={12} md={8}>
-        <Well bsSize="sm"><MapWithAMarkerClusterer /></Well>
-        </Col>
-        <Col xs={6} md={4}>
-        <UserForm />
-        <hr />
-        <MapModal />
-        </Col>
-        </Row>
+          <Row className="show-grid">
+            <Col sm={12} md={8}>
+              <Well><MapWithAMarkerClusterer /></Well>
+            </Col>
+            <Col xs={1} sm={2}></Col>
+            <Col xs={10} sm={8} md={4} className="form-div">
+              <UserForm />
+              <br />
+              <hr />
+              <MapModal />
+            </Col>
+            <Col xs={1} sm={2}></Col>
+          </Row>
         </Grid>
       </div>
     );
