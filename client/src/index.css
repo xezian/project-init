@@ -1,11 +1,12 @@
 body {
-  background-image: linear-gradient(rgba(100, 50, 50, 1), rgba(100, 50, 50, 0.3)), url(./bikerack.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(./bikerack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Mina', sans-serif;
 }
 .modal-container {
   position: relative;

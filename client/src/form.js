@@ -43,15 +43,15 @@ export class UserForm extends Component {
       return (
         <form>
           <FormGroup>
-          <input type="text" name="name" placeholder="name" value={name} onChange={this.onChange} />
+            <input type="text" name="name" placeholder="name" value={name} onChange={this.onChange} />
           </FormGroup>
           <FormGroup>
-          <input type="text" name="about" placeholder="about" value={about} onChange={this.onChange} />
+            <input type="text" name="about" placeholder="about" value={about} onChange={this.onChange} />
           </FormGroup>
           <FormGroup>
-          <input type="text" name="city" placeholder="city" value={city} onChange={this.onChange} />
+            <input type="text" name="city" placeholder="city" value={city} onChange={this.onChange} />
           </FormGroup>
-          <Button bsStyle="primary" type="submit" onClick={this.onSubmit}>Submit</Button>
+          <Button bsStyle="primary btn-block" type="submit" onClick={this.onSubmit}>Submit</Button>
         </form>
       );
     }

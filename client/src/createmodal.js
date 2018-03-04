@@ -33,7 +33,7 @@ export class MapModal extends React.Component {
     return (
       <div>
 
-        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
+        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow} className="modal-btn">
           Launch Map Modal
         </Button>
 

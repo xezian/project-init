@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 175px;
   padding: 20px;
   color: white;
 }
@@ -25,4 +25,30 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* =========================================== */
+/* ============== FORM STYLES ================ */
+/* =========================================== */
+
+.form-div {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  height: 440px;
+  padding: 50px;
+}
+
+.show-grid {
+  margin-top: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-btn {
+  margin-top: 40px;
 }
