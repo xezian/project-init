@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import logo from './bike-gear-icon.png';
 import './App.css';
 import { UserForm } from './form.js';
-import { MapModal } from './mapmodal.js';
+import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
-import { Grid, Col, Row } from 'react-bootstrap'
+import { Grid, Col, Row, Well } from 'react-bootstrap';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
         <Grid>
         <Row className="show-grid">
         <Col xs={12} md={8}>
-        <MapWithAMarkerClusterer />
+        <Well bsSize="sm"><MapWithAMarkerClusterer /></Well>
         </Col>
         <Col xs={6} md={4}>
         <UserForm />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Popover, Tooltip, Modal, OverlayTrigger } from 'react-bootstrap';
+        import { Button, Popover, Tooltip, Modal, OverlayTrigger } from 'react-bootstrap';
 import { UserForm } from './form.js';
 
 export class MapModal extends React.Component {
@@ -51,7 +51,6 @@ export class MapModal extends React.Component {
               </OverlayTrigger>{' '}
               here
             </p>
-
             <h4>Tooltips in a modal</h4>
             <p>
               there is a{' '}
@@ -60,9 +59,7 @@ export class MapModal extends React.Component {
               </OverlayTrigger>{' '}
               here
             </p>
-
             <hr />
-
             <h4>Overflowing text to show scroll behavior</h4>
             <p>
               Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
@@ -70,7 +67,6 @@ export class MapModal extends React.Component {
               ac consectetur ac, vestibulum at eros.
             </p>
             <UserForm />
-
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
