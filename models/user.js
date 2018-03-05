@@ -12,10 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Comment, {
       onDelete: "cascade"
     });
-  
     User.hasMany(models.Project, {
       onDelete: "cascade"
-    });  
+    });
+    User.hasMany(models.Vote, {
+      onDelete: "cascade"
+    });
   };
   return User;
 };
