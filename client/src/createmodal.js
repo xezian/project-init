@@ -1,6 +1,6 @@
 import React from 'react';
         import { Button, Popover, Tooltip, Modal, OverlayTrigger } from 'react-bootstrap';
-import { UserForm } from './form.js';
+import { CreateProjectForm } from './project-form.js';
 
 export class MapModal extends React.Component {
   constructor(props, context) {
@@ -66,7 +66,7 @@ export class MapModal extends React.Component {
               dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
               ac consectetur ac, vestibulum at eros.
             </p>
-            <UserForm />
+            <CreateProjectForm />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>

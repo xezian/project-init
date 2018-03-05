@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './bike-gear-icon.png';
 import './App.css';
-import { UserForm } from './form.js';
+import { CreateProjectForm } from './project-form.js';
 import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
@@ -23,7 +23,7 @@ class App extends Component {
             </Col>
             <Col xs={1} sm={2}></Col>
             <Col xs={10} sm={8} md={4} className="form-div">
-              <UserForm />
+              <CreateProjectForm />
               <br />
               <hr />
               <MapModal />

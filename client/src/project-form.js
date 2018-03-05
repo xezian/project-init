@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, FormGroup } from 'react-bootstrap';
 import $  from 'jquery';
 
-export class UserForm extends Component {
+export class CreateProjectForm extends Component {
     constructor() {
       super();
       this.state = {
@@ -51,7 +51,7 @@ export class UserForm extends Component {
           <FormGroup>
             <input type="text" name="city" placeholder="city" value={city} onChange={this.onChange} />
           </FormGroup>
-          <Button bsStyle="primary btn-block" type="submit" onClick={this.onSubmit}>Submit</Button>
+          <Button bsStyle="primary" type="submit" onClick={this.onSubmit}>Submit</Button>
         </form>
       );
     }
