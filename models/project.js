@@ -9,9 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     project_img: DataTypes.STRING
   }, {});
   Project.associate = function(models) {
-    Project.belongsTo(models.User, {
-      as: "project_creator"
-    });
+    Project.belongsTo(models.User);
     Project.hasMany(models.Comment, {
       as: "project_comments"
     });
