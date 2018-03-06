@@ -1,6 +1,7 @@
 import React from 'react';
-        import { Button, Popover, Tooltip, Modal, OverlayTrigger } from 'react-bootstrap';
+import { Button, Popover, Tooltip, Modal, OverlayTrigger, ControlLabel, FormGroup, FormControl } from 'react-bootstrap';
 import { CreateProjectForm } from './project-form.js';
+import logo from './bike-gear-icon.png';
 
 export class MapModal extends React.Component {
   constructor(props, context) {
@@ -39,37 +40,35 @@ export class MapModal extends React.Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Create a Project</Modal.Title>
+            <img src={logo} className="App-logo" alt="logo" />
+            <Modal.Title></Modal.Title>
           </Modal.Header>
           <Modal.Body>
 
-            <h4>Popover in a modal</h4>
+            <h3>Create a Project</h3>
             <p>
-              there is a{' '}
-              <OverlayTrigger overlay={popover}>
-                <a href="#popover">popover</a>
-              </OverlayTrigger>{' '}
-              here
+              Please select a category that best describes your project.
             </p>
-            <h4>Tooltips in a modal</h4>
-            <p>
-              there is a{' '}
-              <OverlayTrigger overlay={tooltip}>
-                <a href="#tooltip">tooltip</a>
-              </OverlayTrigger>{' '}
-              here
-            </p>
+              <FormGroup controlId="formControlsSelect">
+                <ControlLabel></ControlLabel>
+                <FormControl componentClass="select" placeholder="select">
+                  <option value="select">select</option>
+                  <option value="1">Lighting</option>
+                  <option value="2">Intersections</option>
+                  <option value="3">Road Conditions</option>
+                  <option value="4">Road Crossing</option>
+                  <option value="5">Route Proposal</option>
+                </FormControl>
+              </FormGroup>
             <hr />
-            <h4>Overflowing text to show scroll behavior</h4>
+            <h4>Tell us about your project!</h4>
             <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
+             Please choose a project name that is brief and concise.
             </p>
             <CreateProjectForm />
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleClose}>Close</Button>
+            <Button bsStyle="primary" type="submit" onClick={this.onSubmit}>Submit</Button>
           </Modal.Footer>
         </Modal>
       </div>
