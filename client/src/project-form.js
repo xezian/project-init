@@ -52,7 +52,7 @@ export class CreateProjectForm extends Component {
       const data = {
         name: this.state.name,
         about: this.state.about,
-        project_img_url: imagePreviewUrl
+        project_img_url: this.state.imagePreviewUrl
       };
       console.log(data);
       $.post({
