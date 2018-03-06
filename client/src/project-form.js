@@ -51,7 +51,6 @@ export class CreateProjectForm extends Component {
           <FormGroup>
             <input type="text" name="city" placeholder="city" value={city} onChange={this.onChange} />
           </FormGroup>
-          <Button bsStyle="primary" type="submit" onClick={this.onSubmit}>Submit</Button>
         </form>
       );
     }
