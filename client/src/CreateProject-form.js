@@ -3,9 +3,9 @@ import { Button, FormGroup } from 'react-bootstrap';
 import $ from 'jquery';
 
 export class CreateProjectForm extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
         name: '',
         about: '',
       };
