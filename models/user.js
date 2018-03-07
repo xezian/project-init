@@ -4,8 +4,6 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    profile_img: DataTypes.STRING,
-    about: DataTypes.STRING
   }, {});
   User.associate = function(models) {
     // When a User is deleted, also delete any associated comments

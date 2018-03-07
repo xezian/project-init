@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
     category: DataTypes.STRING,
     latitude: DataTypes.FLOAT,
     longitude: DataTypes.FLOAT,
-    project_img_url: DataTypes.STRING
   }, {});
   Project.associate = function(models) {
     Project.belongsTo(models.User);
