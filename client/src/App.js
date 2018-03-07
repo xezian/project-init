@@ -6,7 +6,7 @@ import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
 import { HeaderNavigation } from './HeaderNavigation.js'
 import { SignUp } from './Signup.js';
-
+import { UserLogin } from './UserLogin.js'
 
 class App extends Component {
   render() {
@@ -27,6 +27,8 @@ class App extends Component {
             </Col>
             <Col xs={1} sm={2}></Col>
           </Row>
+          <SignUp />
+          <UserLogin />
         </Grid>
       </div>
     );

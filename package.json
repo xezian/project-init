@@ -22,10 +22,16 @@
   },
   "homepage": "https://github.com/xezian/project-init#readme",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.35.1"
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^4.35.1",
+    "serve-static": "^1.13.2"
   },
   "devDependencies": {
     "tape": "^4.9.0"

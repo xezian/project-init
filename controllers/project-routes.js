@@ -14,7 +14,8 @@ module.exports = function(app) {
         db.Project.create({
             name: req.body.name,
             about: req.body.about,
-            project_img: req.body.city,
+            latitude: req.body.latitude,
+            longitude: req.body.longitude
         }).then(function(dbProject) {
             res.json(dbProject);
         });
