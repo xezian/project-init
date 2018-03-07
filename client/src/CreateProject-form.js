@@ -4,23 +4,23 @@ import ImgUploader from './ImgUploader.js';
 import $  from 'jquery';
 
 export class CreateProjectForm extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
+  constructor(props) {
+    super(props);
+    this.state = {
         name: '',
         about: '',
         file: '',
         imagePreviewUrl: ''
       };
-      this._handleUpload = this._handleUpload.bind(this);
-      this._handleImageChange = this._handleImageChange.bind(this);
+    this._handleUpload = this._handleUpload.bind(this);
+    this._handleImageChange = this._handleImageChange.bind(this);
     }
 
-    _handleUpload(e) {
-      e.preventDefault();
+  _handleUpload(e) {
+    e.preventDefault();
       // TODO: do something with -> this.state.file
-      console.log('handle uploading-', this.state.file);
-    }
+    console.log('handle uploading-', this.state.file);
+  }
 
     _handleImageChange(e) {
       e.preventDefault();
@@ -33,10 +33,10 @@ export class CreateProjectForm extends Component {
           file: file,
           imagePreviewUrl: reader.result
         });
-      }
+      };
 
-      reader.readAsDataURL(file)
-    }
+    reader.readAsDataURL(file);
+  }
 
     onChange = (e) => {
       // Because we named the inputs to match their corresponding values in state, it's
@@ -82,7 +82,7 @@ export class CreateProjectForm extends Component {
             <textarea id="projectAboutField" type="text" name="about" placeholder="about" value={about} onChange={this.onChange}></textarea>
           </FormGroup>
           <FormGroup>
-            <ImgUploader 
+            <ImgUploader
               _handleImageChange = {this._handleImageChange}
               _handleUpload = {this._handleUpload}
             />

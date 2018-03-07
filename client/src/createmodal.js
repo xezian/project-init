@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Popover, Tooltip, Modal, OverlayTrigger, ControlLabel, FormGroup, FormControl } from 'react-bootstrap';
-import { CreateProjectForm } from './project-form.js';
+import { CreateProjectForm } from './CreateProject-form.js';
 import logo from './bike-gear-icon.png';
 
 export class MapModal extends React.Component {
