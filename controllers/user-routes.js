@@ -1,5 +1,6 @@
 // Require all models
 var db = require("../models");
+const passport = require('passport');
 
 // Set up api routes
 module.exports = function(app) {
@@ -28,22 +29,13 @@ module.exports = function(app) {
   });
 
   // ============================================== //
-  // ============ POST ROUTES FOR USERS =========== //
+  // ========== POST ROUTES FOR USERS============== //
   // ============================================== //
 
-  // Create a new user
-  app.post("/api/users", function(req, res) {
-    db.User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-      profile_img: req.body.profile_img,
-      about_me: req.body.about_me
-    })
-    .then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
+  app.post('/api/login', passport.authenticate('local', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/',
+  }));
 
   // ============================================== //
   // ========== DELETE ROUTES FOR USERS============ //
