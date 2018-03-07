@@ -1,21 +1,16 @@
 import React, { Component } from 'react';
-import logo from './bike-gear-icon.png';
 import './App.css';
-import { CreateProjectForm } from './project-form.js';
+import { CreateProjectForm } from './CreateProject-form.js';
 import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
+import { HeaderNavigation } from './HeaderNavigation.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Project Initiative</h1>
-        </header>
-        <p className="App-intro">
-        </p>
+        <HeaderNavigation />
         <Grid>
           <Row className="show-grid">
             <Col sm={12} md={8}>
