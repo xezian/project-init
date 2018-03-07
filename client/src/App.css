@@ -66,3 +66,12 @@ input, textarea {
 .modal-btn {
   margin-top: 40px;
 }
+
+#signup input {
+  margin-bottom: 10px;
+}
+
+#submit-btn {
+  background-color: #0000ff;
+  color: #fff;
+}

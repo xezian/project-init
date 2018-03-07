@@ -5,6 +5,7 @@ import { CreateProjectForm } from './project-form.js';
 import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
+import { SignUp } from './Signup.js';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Project Initiative</h1>
+          <button>Signup</button>
         </header>
         <p className="App-intro">
         </p>
