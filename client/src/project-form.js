@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, FormGroup } from 'react-bootstrap';
-import $  from 'jquery';
+import $ from 'jquery';
 
 export class CreateProjectForm extends Component {
     constructor(props) {
