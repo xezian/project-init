@@ -6,7 +6,8 @@ import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
 import { HeaderNavigation } from './HeaderNavigation.js'
 import { SignUp } from './Signup.js';
-
+import { Projects } from './projects.js'
+import { ListOfProjects } from './ListOfAllProjects.js'
 
 class App extends Component {
   render() {
@@ -20,7 +21,7 @@ class App extends Component {
             </Col>
             <Col xs={1} sm={2}></Col>
             <Col xs={10} sm={8} md={4} className="form-div">
-              <CreateProjectForm />
+              <Projects />
               <br />
               <hr />
               <MapModal />

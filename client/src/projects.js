@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
+import { ListOfProjects } from './ListOfAllProjects.js'
 const $ = require('jquery');
 
-class ListOfProjects extends Component {
-  render() {
-    return <ul>{this.props.projects.map(project =>
-            <li key={project.id}>{project.name}
-            </li>
-        )}</ul>;
-  }
-};
+
 export class Projects extends Component {
   constructor(props) {
     super(props);

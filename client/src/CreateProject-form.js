@@ -10,7 +10,7 @@ export class CreateProjectForm extends Component {
         about: '',
       };
     }
-    
+
     onChange = (e) => {
       // Because we named the inputs to match their corresponding values in state, it's
       // super easy to update the state
@@ -46,7 +46,6 @@ export class CreateProjectForm extends Component {
           <FormGroup>
             <textarea id="projectAboutField" type="text" name="about" placeholder="about" value={about} onChange={this.onChange}></textarea>
           </FormGroup>
-          <Button bsStyle="primary" className="submitButton" type="submit" onClick={this.onSubmit}>Submit New Project</Button>
         </form>
       );
     }
