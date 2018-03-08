@@ -46,6 +46,7 @@ export class CreateProjectForm extends Component {
           <FormGroup>
             <textarea id="projectAboutField" type="text" name="about" placeholder="about" value={about} onChange={this.onChange}></textarea>
           </FormGroup>
+          <Button bsStyle="danger" type="submit" onClick={this.onSubmit}>Submit New Project</Button>
         </form>
       );
     }

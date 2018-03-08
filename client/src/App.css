@@ -27,6 +27,33 @@
   to { transform: rotate(360deg); }
 }
 
+#nav-btn {
+  float: right;
+  margin-top: -20px;
+}
+
+#nav-btn button {
+  padding: 5px 30px;
+  font-size: 130%;
+  float: right;
+  margin-left: 10px;
+}
+
+#nav-btn div {
+  float: right;
+}
+
+#login-btn {
+  background-color: #fff;
+  color: #d9534f;
+  border-color: #d9534f;
+}
+
+#login-btn:hover {
+  background-color: #d9534f;
+  color: #fff;
+}
+
 /* =========================================== */
 /* ============== FORM STYLES ================ */
 /* =========================================== */
@@ -49,6 +76,10 @@ input, textarea {
   border: none;
 }
 
+textarea {
+  height: 150px;
+}
+
 .imgTime {
   height: 150px;
 }
@@ -67,7 +98,7 @@ input, textarea {
   margin-top: 40px;
 }
 
-#signup input {
+#login input {
   margin-bottom: 10px;
 }
 
