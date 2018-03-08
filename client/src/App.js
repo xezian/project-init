@@ -27,14 +27,10 @@ class App extends Component {
             </Col>
             <Col xs={1} sm={2}></Col>
           </Row>
-          <SignUp />
-          <UserLogin />
         </Grid>
       </div>
     );
   }
 }
-
-
 
 export default App;

@@ -49,12 +49,23 @@ export class UserLogin extends Component {
     render() {
         const { name, password } = this.state;
         return (
-            <form className="signInForm">
-                <h2>Log On In</h2>
-                <input type="text" value={name} onChange={this.onNameChange} placeholder="username"/>
-                <input type="password" value={password} onChange={this.onPwChange} placeholder="password"/>
-                <button type="submit" value="Submit" onClick={this.handleSubmit}>Submit </button>
-            </form>
+            <div>
+                <form className="form-signin" onSubmit={this.onSubmit} id="login">
+                    <div>
+                        <input type="text" name="name" className="form-control"
+                        placeholder="Enter username" value={name} onChange={this.onNameChange} autoFocus />
+                    </div>
+
+                    <div>
+                        <input type="password" name="email" className="form-control"
+                        placeholder="Enter password" value={password} onChange={this.onPwChange} />
+                    </div>
+
+                    <button className="btn btn-block btn-danger" type="submit" value="Submit" onClick={this.handleSubmit}>
+                        Login
+                    </button>
+                </form>
+            </div>
         )
     }
 }
