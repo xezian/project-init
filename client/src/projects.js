@@ -16,7 +16,6 @@ export class Projects extends Component {
         method: 'GET',
         url: '/api/projects',
       }).then(res => {
-        console.log(res);
         this.setState({ projects: res });
       });
     }
