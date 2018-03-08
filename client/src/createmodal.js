@@ -35,7 +35,7 @@ export class MapModal extends React.Component {
       <div>
 
         <Button bsStyle="danger" bsSize="large" onClick={this.handleShow} id="modal-btn">
-          Launch Map Modal
+          Create a Project!
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
@@ -47,7 +47,9 @@ export class MapModal extends React.Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <CreateProjectForm />
+            <CreateProjectForm
+              handleClose={this.handleClose}
+             />
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
         </Modal>

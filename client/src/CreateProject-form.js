@@ -28,7 +28,7 @@ export class CreateProjectForm extends Component {
         about: this.state.about,
 	category: this.state.category,
 	latitude: this.state.latitude,
-	longitude: this.state.longitude,      
+	longitude: this.state.longitude,
       };
       console.log(data);
       $.post({
@@ -37,6 +37,7 @@ export class CreateProjectForm extends Component {
         dataType: 'json'
       }).then((result) => {
         console.log(result);
+        this.props.handleClose()
       });
     }
 

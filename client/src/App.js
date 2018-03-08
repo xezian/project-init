@@ -23,10 +23,8 @@ class App extends Component {
             <Col xs={1} sm={2}></Col>
             <Col xs={10} sm={8} md={4} className="form-div">
               <Projects />
-              <hr />
+              	 <MapModal />
             </Col>
-	    <MapModal />
-            <Col xs={1} sm={2}></Col>
           </Row>
         </Grid>
       </div>
