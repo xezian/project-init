@@ -34,18 +34,20 @@ export class MapModal extends React.Component {
     return (
       <div>
 
-        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow} className="modal-btn">
+        <Button bsStyle="danger" bsSize="large" onClick={this.handleShow} id="modal-btn">
           Launch Map Modal
         </Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <img src={logo} className="App-logo" alt="logo" />
-            <Modal.Title></Modal.Title>
+            <Modal.Title>
+              <div className="text-center">
+                <img src={logo} className="App-logo" alt="logo" />
+              </div>
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-
-            <h3>Create a Project</h3>
+            <h2 className="text-danger">Create a Project</h2>
             <p>
               Please select a category that best describes your project.
             </p>
@@ -67,9 +69,7 @@ export class MapModal extends React.Component {
             </p>
             <CreateProjectForm />
           </Modal.Body>
-          <Modal.Footer>
-            <Button bsStyle="primary" type="submit" onClick={this.onSubmit}>Submit</Button>
-          </Modal.Footer>
+          <Modal.Footer></Modal.Footer>
         </Modal>
       </div>
     );
