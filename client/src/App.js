@@ -25,6 +25,7 @@ class App extends Component {
               <Projects />
               <hr />
             </Col>
+	    <MapModal />
             <Col xs={1} sm={2}></Col>
           </Row>
         </Grid>

@@ -10,12 +10,19 @@ module.exports = function(app) {
 
     // Create a new project
     app.post("/api/projects", function(req, res) {
-    
+	if (req.body.latitude === undefined) {
+		req.body.latitude = 32.2217
+	}    
+	
+	if (req.body.longitude === undefined) {
+		req.body.longitude = -110.9265 
+	}    
         db.Project.create({
             name: req.body.name,
             about: req.body.about,
             latitude: req.body.latitude,
-            longitude: req.body.longitude
+            longitude: req.body.longitude,
+	    category: req.body.category
         }).then(function(dbProject) {
             res.json(dbProject);
         });

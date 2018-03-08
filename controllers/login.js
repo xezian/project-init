@@ -4,24 +4,17 @@ const passport = require('passport'),
     db = require('../models')
 
 module.exports = function(app) {
-    app.use(passport.initialize());
-    app.use(passport.session());
     passport.use(new LocalStrategy(function(username, password, done) {
         db.User.findOne({
             where: {
             'username': username
             }
         }).then(function (user) {
-            console.log(user.dataValues.salt);
             if (user == null) {
                 console.log("user == null");
                 return done(null, false, { message: 'Incorrect credentials.' })
-            }
-            console.log(password);
-            console.log(user);
+            };
             const hashedPassword = bcrypt.hashSync(password, user.dataValues.salt);
-            console.log(hashedPassword);
-            console.log(user.dataValues.password);
             if (user.dataValues.password === hashedPassword) {
                 console.log("user.password === hashedPassword (success?)");
                 return done(null, user)

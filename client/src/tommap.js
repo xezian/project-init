@@ -57,6 +57,8 @@ export default class DemoApp extends React.PureComponent {
 	componentDidMount() {
 		const url = [
 			// Length issue
+			//`https://gist.githubusercontent.com/farrrr/dfda7dd7fccfec5474d3/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`,
+						
 			`https://gist.githubusercontent.com`,
 			`/farrrr/dfda7dd7fccfec5474d3`,
 			`/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`
