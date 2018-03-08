@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import validator from 'validator';
 import $ from "jquery";
 
+
 export class SignUp extends React.Component {
   constructor(props) {
     super(props);
@@ -108,8 +109,6 @@ export class SignUp extends React.Component {
     return (
       <div>
         <form className="form-signin" onSubmit={this.onSubmit}>
-          <h2 className="form-signin-heading">Create Account</h2>
-
           <div className={nameClass}>
             <input type="text" name="name" className="form-control"
               placeholder="Choose a username" value={name.value} onChange={this.onChange} autoFocus />
@@ -134,7 +133,7 @@ export class SignUp extends React.Component {
             <span className="help-block">{confirm.message}</span>
           </div>
 
-          <button className="btn btn-primary btn-block" type="submit">Create Account</button>
+          <button className="btn btn-block btn-danger" type="submit">Create Account</button>
         </form>
       </div>
     );
