@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 if( process.env.NODE_ENV === 'production' ){
   app.use(express.static('client/build'));
-};
+}
 
 // Import routes and give the server access to them.
 const projectRoutes = require("./controllers/project-routes.js");

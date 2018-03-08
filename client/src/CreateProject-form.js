@@ -10,7 +10,7 @@ export class CreateProjectForm extends Component {
         about: '',
       };
     }
-    
+
     onChange = (e) => {
       // Because we named the inputs to match their corresponding values in state, it's
       // super easy to update the state
