@@ -1,0 +1,32 @@
+_onClick = ({x, y, lat, lng, event}) => {
+    this.setState({
+        lat: lat, 
+        lng: lng,
+        isClicked: true
+    }); 
+}
+
+<GoogleMapReact onClick={this._onClick}
+    center={this.state.center}
+    defaultZoom={this.props.zoom} 
+    options = {{ mapTypeId: 'satellite' }}
+    style={{height: '680px', width: '560px'}}
+>
+    {this.state.markers.map((marker, i) => {
+        return(
+            <AnyReactComponent key={i}
+                lat={marker.lat}
+                lng={marker.lng}
+                img_src={marker.img_src}
+            />
+
+        )
+    })} 
+    {this.state.isClicked? 
+        <AnyReactComponent key={i}
+            lat={this.state.lat}
+            lng={this.state.lng}
+            img_src={marker.img_src}
+        /> 
+    :null}   
+</GoogleMapReact>
