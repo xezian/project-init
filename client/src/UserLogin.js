@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import $  from 'jquery';
 
 const checkNamePassword = (name, password) => {
+    console.log("hi "+name)
     // check name and password
     // get our form data out of state
     const data = {
-        name: name,
-        about: about,
+        username: name,
+        password: password,
     };
     $.post({
         data: data,
@@ -17,7 +18,7 @@ const checkNamePassword = (name, password) => {
     })
 }
 
-export default class UserLogin extends Component {
+export class UserLogin extends Component {
     
     constructor(props){
         super(props);
@@ -48,10 +49,11 @@ export default class UserLogin extends Component {
     render() {
         const { name, password } = this.state;
         return (
-            <form className="signInForm" onSubmit={this.handleSubmit}>
-                <input type="text" value={this.name} onChange={this.onNameChange} placeholder="username"/>
-                <input type="password" value={this.password} onChange={this.onPwChange} placeholder="password"/>
-                <input type="submit" value="Submit" />
+            <form className="signInForm">
+                <h2>Log On In</h2>
+                <input type="text" value={name} onChange={this.onNameChange} placeholder="username"/>
+                <input type="password" value={password} onChange={this.onPwChange} placeholder="password"/>
+                <button type="submit" value="Submit" onClick={this.handleSubmit}>Submit </button>
             </form>
         )
     }

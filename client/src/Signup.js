@@ -33,7 +33,7 @@ export class SignUp extends React.Component {
     if (this.formIsValid()) { 
       // Credentials must be saved to database...
       const data = {
-        name: this.state.name,
+        username: this.state.name,
         email: this.state.email,
         password: this.state.password
       };

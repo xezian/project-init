@@ -8,6 +8,7 @@ import { HeaderNavigation } from './HeaderNavigation.js'
 import { SignUp } from './Signup.js';
 import { Projects } from './projects.js'
 import { ListOfProjects } from './ListOfAllProjects.js'
+import { UserLogin } from './UserLogin.js'
 
 class App extends Component {
   render() {
@@ -28,6 +29,8 @@ class App extends Component {
             </Col>
             <Col xs={1} sm={2}></Col>
           </Row>
+          <SignUp />
+          <UserLogin />
         </Grid>
       </div>
     );
