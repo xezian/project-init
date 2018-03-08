@@ -10,7 +10,7 @@ module.exports = function(app){
         // First off, get the username password and email from the api
         const username = req.body.username.value;
         const email = req.body.email.value;
-        const password = req.body.password.toString();
+        const password = req.body.password.value;
         // Secondly, encrypt the password
         const salt = bcrypt.genSaltSync(10);
         console.log(salt);

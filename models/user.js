@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     salt: DataTypes.STRING,
-  }, {timestamps: false});
+  },{ timestamps: false });
   User.associate = function(models) {
     // When a User is deleted, also delete any associated comments
     User.hasMany(models.Comment, {

@@ -12,16 +12,20 @@ module.exports = function(app) {
             'username': username
             }
         }).then(function (user) {
+            console.log(user.dataValues.salt);
             if (user == null) {
-            return done(null, false, { message: 'Incorrect credentials.' })
+                console.log("user == null");
+                return done(null, false, { message: 'Incorrect credentials.' })
             }
-            
-            var hashedPassword = bcrypt.hashSync(password, user.salt)
-            
-            if (user.password === hashedPassword) {
-            return done(null, user)
+            console.log(password);
+            console.log(user);
+            const hashedPassword = bcrypt.hashSync(password, user.dataValues.salt);
+            console.log(hashedPassword);
+            console.log(user.dataValues.password);
+            if (user.dataValues.password === hashedPassword) {
+                console.log("user.password === hashedPassword (success?)");
+                return done(null, user)
             }
-            
             return done(null, false, { message: 'Incorrect credentials.' })
         })
         }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import $  from 'jquery';
 
 const checkNamePassword = (name, password) => {
-    console.log("hi "+name)
+    console.log("hi "+name+"\n"+"Let's get you logged in")
     // check name and password
     // get our form data out of state
     const data = {
@@ -11,10 +11,11 @@ const checkNamePassword = (name, password) => {
     };
     $.post({
         data: data,
-        url: `/api/login/`,
+        url: '/api/login/',
         dataType: "json"
     }).then(res => {
-        console.log(res);
+        console.log("Ewzer Awthentickeytid!!!!!!!! Now what?")
+        console.log(JSON.stringify(res));
     })
 }
 
