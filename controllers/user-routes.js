@@ -32,12 +32,12 @@ module.exports = function(app) {
   // ========== POST ROUTES FOR USERS============== //
   // ============================================== //
 
-  app.post('/api/login',
-  passport.authenticate('local'),
-  function(req, res) {
-    // If this function gets called, authentication was successful.
-    // `req.user` contains the authenticated user.
-    res.json(req.user);
+  app.post('/api/login', function(req, res, next ){
+    passport.authenticate('local', function(err, user, info) {
+      if (err) { return next(err) }
+      if (!user) { return res.json( { message: info.message }) }
+      res.json(user);
+    })(req, res, next);   
   });
 
   // ============================================== //

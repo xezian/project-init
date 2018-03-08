@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const flash = require("connect-flash");
+const util = require("util");
 
 const PORT = process.env.PORT || 3030;
 
@@ -20,6 +22,7 @@ app.use(require('cookie-parser')());
 app.use(require('express-session')({ secret: 'finish the entire project', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 // Import routes and give the server access to them.
 const projectRoutes = require("./controllers/project-routes.js");

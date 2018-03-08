@@ -14,7 +14,6 @@ const checkNamePassword = (name, password) => {
         url: '/api/login/',
         dataType: "json"
     }).then(res => {
-        console.log("Ewzer Awthentickeytid!!!!!!!! Now what?")
         console.log(JSON.stringify(res));
     })
 }
