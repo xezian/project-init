@@ -22,7 +22,7 @@ export class Projects extends Component {
   render() {
     return (
             <div>
-                <h1>Top Ranked Projects</h1>
+                <h2>Top Ranked Projects</h2>
                 <ListOfProjects
                     projects={this.state.projects}
                 />

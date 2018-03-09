@@ -22,6 +22,12 @@
   font-size: large;
 }
 
+#nav {
+  display: inline-block;
+  float: left;
+  margin-right: 0px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -30,6 +36,7 @@
 #nav-btn {
   float: right;
   margin-top: -20px;
+  margin-bottom: 20px;
 }
 
 #nav-btn button {
@@ -55,9 +62,8 @@
 }
 
 #brand {
-  margin-bottom: -10px;
-  margin-top: 25px;
   float: left;
+  margin-top: 25px;
 }
 
 /* =========================================== */
@@ -80,11 +86,12 @@ input, textarea {
   width: 100%;
   padding: 6px 10px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid #ccc;
 }
 
 textarea {
-  height: 150px;
+  height: 120px;
+  margin-top: 10px;
 }
 
 .imgTime {
@@ -117,4 +124,25 @@ textarea {
 ul {
   list-style: none;
   text-align: left;
+}
+
+/* =========================================== */
+/* ============== MEDIA QUERIES ============== */
+/* =========================================== */
+
+@media screen and (max-width: 550px) {
+  #nav-btn button {
+    padding: 5px 25px;
+    font-size: 110%;
+  }
+
+  #brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-div {
+    margin-bottom: 20px;
+  }
 }

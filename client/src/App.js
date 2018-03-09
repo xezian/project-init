@@ -32,13 +32,16 @@ class App extends Component {
         <Grid>
           <Row className="show-grid">
             <Col sm={12} md={8}>
-              <Well><MapWithAMarkerClusterer /></Well>
+              <Well>
+                <MapWithAMarkerClusterer />
+              </Well>
             </Col>
-            <Col xs={1} sm={2}></Col>
-            <Col xs={10} sm={8} md={4} className="form-div">
+            <Col xs={1}></Col>
+            <Col xs={10} sm={12} md={4} className="form-div">
               <Projects />
-              	 <MapModal />
+              <MapModal />
             </Col>
+            <Col xs={1}></Col>
           </Row>
         </Grid>
       </div>
