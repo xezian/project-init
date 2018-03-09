@@ -4,17 +4,31 @@ import { CreateProjectForm } from './CreateProject-form.js';
 import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
-import { HeaderNavigation } from './HeaderNavigation.js'
-import { SignUp } from './Signup.js';
-import { Projects } from './projects.js'
-import { UserLogin } from './UserLogin.js';
+import { HeaderNavigation } from './HeaderNavigation.js';
+import { Projects } from './projects.js';
+import $ from 'jquery';
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      user: [],
+    };
+  }
+  componentDidMount() {
+  $.ajax({
+      method: 'GET',
+      url: '/api/userlog',
+    }).then(res => {
+      this.setState({ user: res });
+    });
+  }
   render() {
     return (
       <div className="App">
         <HeaderNavigation />
+        <h1>{this.state.user}</h1>
         <Grid>
           <Row className="show-grid">
             <Col sm={12} md={8}>
