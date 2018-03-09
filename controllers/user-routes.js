@@ -2,6 +2,14 @@
 var db = require("../models");
 const passport = require('passport');
 
+function checkAuthentication(req,res,next){
+  if(req.isAuthenticated()){
+      //if user is looged in, req.isAuthenticated() will return true 
+      next();
+  } else {
+    res.json(req.user);
+  }
+}
 // Set up api routes
 module.exports = function(app) {
 
@@ -9,6 +17,10 @@ module.exports = function(app) {
   // ============ GET ROUTES FOR USERS ============ //
   // ============================================== //
 
+  // Get logged in user
+  app.get('api/userlog', checkAuthentication, function(req, res){
+    res.json(req.user);
+  })
   // Get all users
   app.get("/api/users/", function(req, res) {
     db.User.findAll({})

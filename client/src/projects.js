@@ -7,8 +7,8 @@ export class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        projects: [],
-      };
+      projects: [],
+    };
   }
 
   componentDidMount() {
