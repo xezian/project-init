@@ -8,14 +8,12 @@ export class HeaderNavigation extends React.Component {
   render() {
     return (
     <Navbar>
-      <Navbar.Header>
+      <Navbar.Header id="nav">
         <Navbar.Brand>
           <img src={logo} className="App-logo" alt="logo" />
         </Navbar.Brand>
       </Navbar.Header>
-      <Nav>
-      <h1>SHFTR</h1>
-      </Nav>
+      <h1 id="brand">SHFTR</h1>
       <div id="nav-btn">
        <SignUpModal />
        <LoginModal />
