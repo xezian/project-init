@@ -20,14 +20,14 @@ export class SignUp extends React.Component {
     this.resetValidationStates = this.resetValidationStates.bind(this);
   }
 
-  onChange(event) {
+  onChange = (event) => {
     let state = this.state;
     state[event.target.name].value = event.target.value;
 
     this.setState(state);
   }
 
-  onSubmit(event) {
+  onSubmit = (event) => {
     event.preventDefault();
     this.resetValidationStates(); //reset states before the validation procedure is run.
     
@@ -38,14 +38,15 @@ export class SignUp extends React.Component {
         email: this.state.email,
         password: this.state.password
       };
-      console.log(data);
+      // console.log(data);
 
       $.post({
         url: '/api/users',
         data: data,
         dataType: 'json'
       }).then((result) => {
-        console.log(result);
+        // console.log(result);
+        this.props.handleClose();
       });
     }
   }
@@ -133,7 +134,7 @@ export class SignUp extends React.Component {
             <span className="help-block">{confirm.message}</span>
           </div>
 
-          <button className="btn btn-block btn-danger" type="submit">Create Account</button>
+          <button className="btn btn-block btn-danger" type="submit" onClick={this.onSubmit}>Create Account</button>
         </form>
       </div>
     );

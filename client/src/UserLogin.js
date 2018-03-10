@@ -25,7 +25,7 @@ export class UserLogin extends Component {
     }
     
     checkNamePassword = (name, password) => {
-        console.log("hi "+name+"\n"+"Let's get you logged in")
+        // console.log("hi "+name+"\n"+"Let's get you logged in")
         // check name and password
         // get our form data out of state
         const data = {
@@ -37,7 +37,7 @@ export class UserLogin extends Component {
             url: '/api/login/',
             dataType: "json"
         }).then(res => {
-            console.log(JSON.stringify(res));
+            // console.log(JSON.stringify(res));
         })
     }
 

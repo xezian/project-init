@@ -30,14 +30,14 @@ export class CreateProjectForm extends Component {
         latitude: this.state.latitude,
         longitude: this.state.longitude,
       };
-      console.log(data);
+      // console.log(data);
       $.post({
         url: "/api/projects",
         data: data,
         dataType: 'json'
       }).then((result) => {
-        console.log(result);
-        this.props.handleClose()
+        // console.log(result);
+        this.props.handleClose();
       });
     }
 
@@ -45,7 +45,6 @@ export class CreateProjectForm extends Component {
       const { name, about, category } = this.state;
       return (
         <form>
-          <h2 className="text-danger">Create a Project</h2>
           <FormGroup controlId="formControlsSelect">
             <ControlLabel>Select a Category</ControlLabel>
             <FormControl componentClass="select" placeholder="select" name="category" value={this.optionsState} onChange={this.onChange}>

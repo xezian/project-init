@@ -33,7 +33,6 @@ export class MapModal extends React.Component {
 
     return (
       <div>
-
         <Button bsStyle="danger" bsSize="large" onClick={this.handleShow} id="modal-btn">
           Create a Project!
         </Button>
@@ -43,6 +42,7 @@ export class MapModal extends React.Component {
             <Modal.Title>
               <div className="text-center">
                 <img src={logo} className="App-logo" alt="logo" />
+                <h1 className="text-danger">Create a Project</h1>
               </div>
             </Modal.Title>
           </Modal.Header>
