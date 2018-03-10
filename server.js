@@ -17,7 +17,6 @@ if( process.env.NODE_ENV === 'production' ){
   app.use(express.static('client/build'));
 }
 // requirements for express app to use passport
-app.use(require('serve-static')(__dirname + '/../../public'));
 app.use(require('cookie-parser')());
 app.use(require('express-session')({ secret: 'finish the entire project', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
