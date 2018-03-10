@@ -9,7 +9,7 @@
     "test": "node_modules/.bin/tape test/*.js",
     "dev": "node dev.js",
     "prod": "NODE_ENV=production node server.js",
-    "install": "node install.js"
+    "install": "node install.js; npm run build;"
   },
   "repository": {
     "type": "git",
