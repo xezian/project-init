@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ListOfProjects } from './ListOfAllProjects.js'
 const $ = require('jquery');
 
-
 export class Projects extends Component {
   constructor(props) {
     super(props);
@@ -19,14 +18,15 @@ export class Projects extends Component {
         this.setState({ projects: res });
       });
     }
+    
   render() {
     return (
-            <div>
-                <h2>Top Ranked Projects</h2>
-                <ListOfProjects
-                    projects={this.state.projects}
-                />
-            </div>
-        );
+      <div>
+        <h2 className="text-danger">Top Ranked Projects</h2>
+        <ListOfProjects
+          projects={this.state.projects}
+        />
+      </div>
+    );
   }
 }

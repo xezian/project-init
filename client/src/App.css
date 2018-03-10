@@ -126,6 +126,30 @@ ul {
   text-align: left;
 }
 
+.list {
+    color: #222;
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.list:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    border-bottom: none;
+    border-radius: 5px;
+}
+
+.name-state {
+  font-size: 105%;
+  font-weight: bold;
+}
+
+/* ======================================== */
+.modal-body {
+  padding: 20px 30px 15px 40px;
+}
+
 /* =========================================== */
 /* ============== MEDIA QUERIES ============== */
 /* =========================================== */

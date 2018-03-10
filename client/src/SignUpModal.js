@@ -33,9 +33,10 @@ export class SignUpModal extends React.Component {
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>
-            <div className="text-center">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="text-danger">Sign up</h1></div>
+              <div className="text-center">
+                <img src={logo} className="App-logo" alt="logo" />
+                <h1 className="text-danger">Sign up</h1>
+              </div>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -43,7 +44,7 @@ export class SignUpModal extends React.Component {
               Please fill every field
             </p>
               
-              <SignUp />
+              <SignUp handleClose={this.handleClose} />
 
           </Modal.Body>
           <Modal.Footer></Modal.Footer>
