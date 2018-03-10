@@ -43,7 +43,10 @@ export class LoginModal extends React.Component {
               Please fill every field
             </p>
               
-            <UserLogin />
+            <UserLogin 
+              checkNamePassword = {this.props.checkNamePassword}
+              handleClose = {this.handleClose}
+            />
 
           </Modal.Body>
           <Modal.Footer></Modal.Footer>

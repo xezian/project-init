@@ -13,22 +13,36 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      user: [],
+      userID: '',
+      username: ''
     };
+    this.checkNamePassword = this.checkNamePassword.bind(this);
   }
-  componentDidMount() {
-  $.ajax({
-      method: 'GET',
-      url: '/api/userlog',
+  checkNamePassword = (name, password) => {
+    // console.log("hi "+name+"\n"+"Let's get you logged in")
+    // check name and password
+    // get our form data out of state
+    const data = {
+        username: name,
+        password: password,
+    };
+    $.post({
+        data: data,
+        url: '/api/login/',
+        dataType: "json"
     }).then(res => {
-      this.setState({ user: res });
-    });
+        this.setState({
+          userID: res.id,
+          username: res.username
+        });
+    })
   }
   render() {
     return (
       <div className="App">
-        <HeaderNavigation />
-        <h1>{this.state.user}</h1>
+        <HeaderNavigation 
+          checkNamePassword = {this.checkNamePassword}
+        />
         <Grid>
           <Row className="show-grid">
             <Col sm={12} md={8}>
@@ -39,7 +53,10 @@ class App extends Component {
             <Col xs={1}></Col>
             <Col xs={10} sm={12} md={4} className="form-div">
               <Projects />
-              <MapModal />
+              <MapModal 
+                userID={this.state.userID}
+                username={this.state.username}
+              />
             </Col>
             <Col xs={1}></Col>
           </Row>

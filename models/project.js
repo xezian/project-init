@@ -6,12 +6,15 @@ module.exports = (sequelize, DataTypes) => {
     category: DataTypes.STRING,
     latitude: DataTypes.FLOAT,
     longitude: DataTypes.FLOAT,
+    username: DataTypes.STRING,
   }, {timestamps: false});
   Project.associate = function(models) {
-    Project.belongsTo(models.User);
-    Project.hasMany(models.Comment, {
-      as: "project_comments"
+    Project.belongsTo(models.User,{
+      foreignKey: {
+        allowNull: false
+      }
     });
+    Project.hasMany(models.Comment);
   };
   return Project;
 };
