@@ -13,7 +13,6 @@ export class UserLogin extends Component {
         this.onNameChange = this.onNameChange.bind(this);
         this.onPwChange = this.onPwChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.checkNamePassword = this.checkNamePassword.bind(this);
     }
 
     onNameChange = (e) => {
@@ -23,29 +22,13 @@ export class UserLogin extends Component {
     onPwChange = (e) => {
         this.setState({password:e.target.value});
     }
-    
-    checkNamePassword = (name, password) => {
-        // console.log("hi "+name+"\n"+"Let's get you logged in")
-        // check name and password
-        // get our form data out of state
-        const data = {
-            username: name,
-            password: password,
-        };
-        $.post({
-            data: data,
-            url: '/api/login/',
-            dataType: "json"
-        }).then(res => {
-            // console.log(JSON.stringify(res));
-        })
-    }
 
     handleSubmit(e){
         e.preventDefault();
         let name = this.state.name;
         let password = this.state.password;
-        this.checkNamePassword(name, password);
+        this.props.checkNamePassword(name, password);
+        this.props.handleClose();
     }
 
     render() {

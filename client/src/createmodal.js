@@ -49,6 +49,8 @@ export class MapModal extends React.Component {
           <Modal.Body>
             <CreateProjectForm
               handleClose={this.handleClose}
+              userID={this.props.userID}
+              username={this.props.username}
              />
           </Modal.Body>
           <Modal.Footer></Modal.Footer>

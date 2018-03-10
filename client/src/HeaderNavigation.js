@@ -16,7 +16,9 @@ export class HeaderNavigation extends React.Component {
       <h1 id="brand">SHFTR</h1>
       <div id="nav-btn">
        <SignUpModal />
-       <LoginModal />
+       <LoginModal 
+        checkNamePassword = {this.props.checkNamePassword}
+       />
       </div>
     </Navbar>
     );

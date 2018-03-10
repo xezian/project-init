@@ -22,7 +22,9 @@ module.exports = function(app) {
             about: req.body.about,
             latitude: req.body.latitude,
             longitude: req.body.longitude,
-	    category: req.body.category
+            category: req.body.category,
+            username: req.body.username,
+            UserId: req.body.UserId
         }).then(function(dbProject) {
             res.json(dbProject);
         });
