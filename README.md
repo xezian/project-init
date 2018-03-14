@@ -1,4 +1,5 @@
 # project-init
+
 Project Initiator
 
 ### Link to deployed version: 
@@ -15,3 +16,6 @@ Project Initiator
 6. exit the command line `exit` Bye
 7. on the mysql command line, run the schema `\. db/schema.sql`
 8. run the application in dev mode (locally) `npm run dev`
+
+SHFTR
+
