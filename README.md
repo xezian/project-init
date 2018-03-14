@@ -24,6 +24,6 @@ SHFTR is a community driven application that provides a platform for bicyclist t
 7. on the mysql command line, run the schema `\. db/schema.sql`
 8. run the application in dev mode (locally) `npm run dev`
 
-SHFTR
+# SHFTR Application Architecture
 
 ![screen shot 2018-03-14 at 11 04 16 am](https://user-images.githubusercontent.com/30601823/37422037-c60581de-2777-11e8-8056-787c9ec92a8e.png)
