@@ -2,6 +2,9 @@
   "name": "project-init",
   "version": "1.0.0",
   "description": "project-init",
+  "engines": {
+    "node":"9.4.0"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
