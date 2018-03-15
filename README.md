@@ -31,6 +31,7 @@ SHFTR is a community driven application that provides a platform for bicyclist t
 * Express server to manage routing and connection with the server
 * [React](https://reactjs.org/) for client-side UI
 * [Passport](http://www.passportjs.org/) for authentication.
+* Tape and Nightmare for testing
 
 # SHFTR Application Architecture
 
