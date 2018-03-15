@@ -1,7 +1,9 @@
+// Import required packages and components
 import React, { Component } from 'react';
 import { Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 import $ from 'jquery';
 
+// CreateProjectForm component to be used by App.js
 export class CreateProjectForm extends Component {
   constructor(props) {
     super(props);

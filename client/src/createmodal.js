@@ -1,8 +1,10 @@
+// Import required packages and components
 import React from 'react';
-import { Button, Popover, Tooltip, Modal, OverlayTrigger, ControlLabel, FormGroup, FormControl } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import { CreateProjectForm } from './CreateProject-form.js';
-import logo from './bike-gear-icon.png';
+import logo from './img/bike-gear-icon.png';
 
+// MapModal component to be rendered by App.js
 export class MapModal extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -24,13 +26,6 @@ export class MapModal extends React.Component {
   }
 
   render() {
-    const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
-      </Popover>
-    );
-    const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
-
     return (
       <div>
         <Button bsStyle="danger" bsSize="large" onClick={this.handleShow} id="modal-btn">

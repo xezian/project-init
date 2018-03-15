@@ -1,8 +1,12 @@
+// Import required packages and components
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { SignUp } from './Signup.js';
-import logo from './bike-gear-icon.png';
+import logo from './img/bike-gear-icon.png';
 
+// SignUpModal component to be rendered by HeaderNavigation.js
+// This component creates a modal that displays the sign up form
+// which is created in SignUp component
 export class SignUpModal extends React.Component {
   constructor(props, context) {
     super(props, context);

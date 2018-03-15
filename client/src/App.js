@@ -1,14 +1,15 @@
+// Import required packages and components
 import React, { Component } from 'react';
-import './App.css';
 import { CreateProjectForm } from './CreateProject-form.js';
-import { MapModal } from './createmodal.js';
-import MapWithAMarkerClusterer from './tommap.js';
+import { MapModal } from './Createmodal.js';
+import MapWithAMarkerClusterer from './Tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
 import { HeaderNavigation } from './HeaderNavigation.js';
-import { Projects } from './projects.js';
+import { Projects } from './Projects.js';
 import $ from 'jquery';
+import './css/App.css';
 
-
+// App component to be rendered by index.js 
 class App extends Component {
   constructor(props){
     super(props);
