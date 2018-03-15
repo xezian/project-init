@@ -1,8 +1,12 @@
+// Import required packages and components
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import { UserLogin } from './UserLogin.js';
-import logo from './bike-gear-icon.png';
+import logo from './img/bike-gear-icon.png';
 
+// LoginModal component to be used by HeaderNavigation.js
+// This component renders UserLogin component which is 
+// a login form that is displayed in a modal
 export class LoginModal extends React.Component {
   constructor(props, context) {
     super(props, context);
