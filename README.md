@@ -13,7 +13,7 @@ SHFTR is a community driven application that provides a platform for bicyclist t
 
 [DEPLOYED VERSION](https://serene-castle-95327.herokuapp.com/)
 
-### Steps to run locally:
+### Steps to run locally (please do!):
 
 1. clone repo `git clone git@github.com:xezian/project-init.git`
 2. navigate to the root directory of the cloned project `/project-init`
@@ -23,6 +23,14 @@ SHFTR is a community driven application that provides a platform for bicyclist t
 6. exit the command line `exit` Bye
 7. on the mysql command line, run the schema `\. db/schema.sql`
 8. run the application in dev mode (locally) `npm run dev`
+
+### Technologies used:
+
+* MySQL for our relational database management system, witth sequelize.js as our ORM framework
+* Node.js for server side architecture
+* Express server to manage routing and connection with the server
+* [React](https://reactjs.org/) for client-side UI
+* [Passport](http://www.passportjs.org/) for authentication.
 
 # SHFTR Application Architecture
 
