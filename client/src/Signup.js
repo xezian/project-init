@@ -1,9 +1,11 @@
+// Import required packages and components
 import React from 'react';
 import classNames from 'classnames';
 import validator from 'validator';
 import $ from "jquery";
 
-
+// SignUp component to be rendered by SignUpModal.js
+// This component creates a sign up form with validation
 export class SignUp extends React.Component {
   constructor(props) {
     super(props);

@@ -1,8 +1,11 @@
+// Import required packages and components
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import logo from './bike-gear-icon.png';
+import logo from './img/bike-gear-icon.png';
 import $ from "jquery";
 
+// ListOfProjects component to be rendered by Projects.js
+// This component makes a list of all saved projects
 export class ListOfProjects extends Component {
   constructor(props, context) {
     super(props, context);
@@ -47,7 +50,7 @@ export class ListOfProjects extends Component {
             )
           }
         </ul>
-
+        
         <Modal show={this.state.show} onHide={this.handleClose} id="project-view">
           <Modal.Header closeButton>
             <Modal.Title>

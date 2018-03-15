@@ -1,7 +1,11 @@
+// Import required packages and components
 import React, { Component } from 'react';
-import { ListOfProjects } from './ListOfAllProjects.js'
-const $ = require('jquery');
+import { ListOfProjects } from './ListOfAllProjects.js';
+import $ from 'jquery';
 
+// Projects component to be rendered by App.js
+// This component brings all listed projects into the project view table
+// Selected project is displayed on modal
 export class Projects extends Component {
   constructor(props) {
     super(props);
