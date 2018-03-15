@@ -1,11 +1,11 @@
 // Import required packages and components
 import React, { Component } from 'react';
 import { CreateProjectForm } from './CreateProject-form.js';
-import { MapModal } from './Createmodal.js';
-import MapWithAMarkerClusterer from './Tommap.js';
+import { MapModal } from './createmodal.js';
+import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';
 import { HeaderNavigation } from './HeaderNavigation.js';
-import { Projects } from './Projects.js';
+import { Projects } from './projects.js';
 import $ from 'jquery';
 import './css/App.css';
 
