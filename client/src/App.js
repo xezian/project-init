@@ -1,6 +1,5 @@
 // Import required packages and components
 import React, { Component } from 'react';
-import { CreateProjectForm } from './CreateProject-form.js';
 import { MapModal } from './createmodal.js';
 import MapWithAMarkerClusterer from './tommap.js';
 import { Grid, Col, Row, Well } from 'react-bootstrap';

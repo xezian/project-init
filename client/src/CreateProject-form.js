@@ -46,7 +46,7 @@ export class CreateProjectForm extends Component {
     }
 
     render() {
-      const { name, about, category } = this.state;
+      const { name, about } = this.state;
       return (
         <form>
           <FormGroup controlId="formControlsSelect">
