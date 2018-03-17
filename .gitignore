@@ -60,3 +60,6 @@ typings/
 #
 notes
 config/config.json
+
+#vim swap files
+*.swp

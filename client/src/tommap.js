@@ -4,7 +4,13 @@ import fetch from 'isomorphic-fetch';
 import { compose, withProps, withHandlers } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import { MarkerClusterer } from 'react-google-maps/lib/components/addons/MarkerClusterer';
-
+let sampleMarkers = require("./SampleMarkers.js")
+const RochMap = GoogleMap
+RochMap.handleClick = () => {
+	this.handleClick.bind(RochMap)
+	console.log("map Clicked")
+}
+console.log(JSON.stringify(GoogleMap))
 const MapWithAMarkerClusterer = compose(
 	withProps({
 		googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBD5IPabgEj_ZWtPwgbTQsx5mFbZB6AUdE&v=3.exp&libraries=geometry,drawing,places",
@@ -22,9 +28,10 @@ const MapWithAMarkerClusterer = compose(
 	withScriptjs,
 	withGoogleMap
 )(props =>
-	<GoogleMap
+	<RochMap
 		defaultZoom={10}
 		defaultCenter={{ lat: 32.253460, lng: -110.911789 }}
+		onClick={props.handleClick}
 	>
 		<MarkerClusterer
 			onClick={props.onMarkerClustererClick}
@@ -40,7 +47,7 @@ const MapWithAMarkerClusterer = compose(
 				/>
 			))}
 		</MarkerClusterer>
-	</GoogleMap>
+	</RochMap>
 );
 
 export default class DemoApp extends React.PureComponent {
@@ -49,20 +56,10 @@ export default class DemoApp extends React.PureComponent {
 	}
 
 	componentDidMount() {
-		const url = [
-			// Length issue
-			//`https://gist.githubusercontent.com/farrrr/dfda7dd7fccfec5474d3/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`,
-						
-			`https://gist.githubusercontent.com`,
-			`/farrrr/dfda7dd7fccfec5474d3`,
-			`/raw/758852bbc1979f6c4522ab4e92d1c92cba8fb0dc/data.json`
-		].join("")
-
-		fetch(url)
-			.then(res => res.json())
-			.then(data => {
-				this.setState({ markers: data.photos });
-			});
+		console.log(sampleMarkers)
+		let rochData = sampleMarkers
+		console.log("this is roch data" + JSON.stringify(rochData))
+		this.setState({ markers: sampleMarkers });
 	}
 
 	render() {
