@@ -35,4 +35,22 @@ SHFTR is a community driven application that provides a platform for bicyclist t
 
 # SHFTR Application Architecture
 
+#Google Map Integration
+
+The Google Map integration uses a react module called "react google maps", this is a wrapper for the google maps api that allows for some dynamic rendering of markers and results.  AirBnb and Zillow have similar implementation of dynamic rendering, updating the DOM with the appropriate markers for the zoomed area of a map and correlating their data with data displayed in a sidebar.
+
+##Markers
+
+The React module has a component for Markers that allows a variety of information to be displayed, from InfoWindows 
+
+Currently the Markers are rendered from a JSON object with corresponding data to our database, in the future we would like to grab this info directly from our database allowing seamless rendering of projects.
+
+##Marker Clusters
+
+We also used the Marker Cluster component of the module.  This groups tightly spaced clusters of Markers into a single button that zooms in on the map to spread the markers out adequately for easy viewing.
+
+##Features to add
+In the future we would like to implement a function that would allow Markers to be placed dynamically on the map, opening a corresponding InfoWindow that would allow users to fill out a form to submit a new project.  This data would be stored into our database with corresponding user information, and the map component reloaded to render the new Project.  This will require a custom constructor for the map and marker components.
+
+
 ![screen shot 2018-03-14 at 11 04 16 am](https://user-images.githubusercontent.com/30601823/37422037-c60581de-2777-11e8-8056-787c9ec92a8e.png)
