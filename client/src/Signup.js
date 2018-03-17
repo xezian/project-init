@@ -91,7 +91,7 @@ export class SignUp extends React.Component {
   resetValidationStates() {
     let state = this.state;
 
-    Object.keys(state).map(key => {
+    Object.keys(state).forEach(key => {
       if (state[key].hasOwnProperty('isValid')) {
         state[key].isValid = true;
         state[key].message = '';
