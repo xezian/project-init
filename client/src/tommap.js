@@ -2,7 +2,7 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
 import { compose, withProps, withHandlers } from 'recompose';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 import { MarkerClusterer } from 'react-google-maps/lib/components/addons/MarkerClusterer';
 let sampleMarkers = require("./SampleMarkers.js")
 const RochMap = GoogleMap
@@ -18,12 +18,18 @@ const MapWithAMarkerClusterer = compose(
 		containerElement: <div style={{ height: `400px`, 'boxShadow': `0 0 40px #000` }} />,
 		mapElement: <div style={{ height: `100%` }} />,
 	}),
-	withHandlers({
+	withHandlers(() => ({
+		isOpen: false,
+	
+	}), {
+		onToggleOpen: ({ isOpen }) => () => ({
+			isOpen: !isOpen,
+		})}, {
 		onMarkerClustererClick: () => (markerClusterer) => {
 			const clickedMarkers = markerClusterer.getMarkers()
 			console.log(`Current clicked markers length: ${clickedMarkers.length}`)
 			console.log(clickedMarkers)
-		},
+		}, 
 	}),
 	withScriptjs,
 	withGoogleMap
@@ -44,7 +50,12 @@ const MapWithAMarkerClusterer = compose(
 					key={marker.photo_id}
 					position={{ lat: marker.latitude, lng: marker.longitude }}
 					onClick={props.onToggleOpen}
-				/>
+				>
+				{props.isOpen && <InfoWindow onCloseClick={props.onToggleOpen}>
+					<div>Project Name: {marker.name} <br/> Category: {marker.category}</div>
+
+				</InfoWindow>}
+				</Marker>
 			))}
 		</MarkerClusterer>
 	</RochMap>
