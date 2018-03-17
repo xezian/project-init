@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import logo from './img/bike-gear-icon.png';
-import $ from "jquery";
 
 // ListOfProjects component to be rendered by Projects.js
 // This component makes a list of all saved projects

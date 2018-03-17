@@ -1,6 +1,5 @@
 // Import required packages and components
 import React, { Component } from 'react';
-import $  from 'jquery';
 
 // UserLogin component to be rendered by LoginModal.js
 // This component creates a login form which is
