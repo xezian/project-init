@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "project-init",
   "engines": {
-    "node":"9.4.0"
+    "node": "9.4.0"
   },
   "main": "index.js",
   "scripts": {
