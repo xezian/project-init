@@ -17,7 +17,6 @@ module.exports = function(app){
         const newUser = {
             username: username,
             email: email,
-            salt: salt,
             password: hashedPassword
         };
         // Lastly, put a new user in the DB
