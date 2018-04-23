@@ -21,7 +21,7 @@ module.exports = function(app) {
             // first hash the password the user submits with bcrypt and the hash from the user table in the db
             const hashedPassword = bcrypt.compareSync(password, user.dataValues.password);
             // now match it against the user's stored hashed password from the db
-            if (user.dataValues.password === hashedPassword) {
+            if (hashedPassword) {
                 // here is the successful login path, returning done(null, user)
                 console.log("user.password === hashedPassword (success?)");
                 return done(null, user)
