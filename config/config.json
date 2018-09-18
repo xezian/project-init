@@ -4,11 +4,12 @@
     "password": null,
     "database": "proj_init_dev_db",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",
-    "password": "period",
+    "password": "",
     "database": "proj_init_dev_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
