@@ -16,7 +16,6 @@ class App extends Component {
       userID: '',
       username: ''
     };
-    this.checkNamePassword = this.checkNamePassword.bind(this);
   }
   checkNamePassword = (name, password) => {
     // console.log("hi "+name+"\n"+"Let's get you logged in")

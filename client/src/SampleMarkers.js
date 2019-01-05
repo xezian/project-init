@@ -32,5 +32,5 @@ let sampleMarkers = [{
 	"category" : "Lighting",
 }]
 
-console.log(sampleMarkers)
+// console.log(sampleMarkers)
 module.exports = sampleMarkers

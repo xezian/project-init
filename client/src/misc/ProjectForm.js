@@ -19,7 +19,7 @@ export class CreateProjectForm extends Component {
     _handleUpload(e) {
       e.preventDefault();
       // TODO: do something with -> this.state.file
-      console.log('handle uploading-', this.state.file);
+      // console.log('handle uploading-', this.state.file);
     }
 
     _handleImageChange(e) {
@@ -60,7 +60,7 @@ export class CreateProjectForm extends Component {
         data: data,
         dataType: 'json'
       }).then((result) => {
-        console.log(result);
+        // console.log(result);
       });
     }
 

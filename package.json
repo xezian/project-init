@@ -1,7 +1,7 @@
 {
-  "name": "project-init",
+  "name": "shftr",
   "version": "1.0.0",
-  "description": "project-init",
+  "description": "SHFTR",
   "engines": {
     "node": "9.4.0"
   },
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xezian/project-init.git"
+    "url": "git+https://github.com/xezian/SHFTR.git"
   },
   "author": "Jason, Chris, Roch, Cuneyt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xezian/project-init/issues"
+    "url": "https://github.com/xezian/SHFTR/issues"
   },
-  "homepage": "https://github.com/xezian/project-init#readme",
+  "homepage": "https://github.com/xezian/SHFTR#readme",
   "dependencies": {
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.2",
